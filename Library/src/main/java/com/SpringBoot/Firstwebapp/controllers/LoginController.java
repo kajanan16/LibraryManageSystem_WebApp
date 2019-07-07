@@ -63,6 +63,7 @@ public class LoginController {
 	@RequestMapping(value = "/deletebook")
 	public String deleteBooks(@RequestParam int id) {
 		repo.deleteById(id);
+		
 		return "redirect:/";
 	}
 	

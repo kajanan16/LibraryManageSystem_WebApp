@@ -16,6 +16,7 @@ import com.SpringBoot.Firstwebapp.Repositories.BBarrow;
 import com.SpringBoot.Firstwebapp.Repositories.BookRepo;
 import com.SpringBoot.Firstwebapp.Repositories.UserRepo;
 import com.SpringBoot.Firstwebapp.Service.Availablity;
+import com.SpringBoot.Firstwebapp.Service.Return;
 import com.SpringBoot.Firstwebapp.Service.UserService;
 import com.SpringBoot.Firstwebapp.model.BookBarrow;
 
@@ -35,9 +36,12 @@ public class UserController {
 
 	@Autowired
 	BBarrow brepo;
-	
+
 	@Autowired
 	Availablity avl;
+
+	@Autowired
+	Return rt;
 
 	@RequestMapping(value = "/addUser")
 	public String userLoad(ModelMap model) {
@@ -95,13 +99,25 @@ public class UserController {
 		ArrayList<Books> alist = new ArrayList();
 //		Optional<Books> obj=brep.findById(1001);
 //		Books lis=obj.get();
-
 		alist.add(brep.findById(b_id).orElse(new Books()));
-		
 		model.put("list", alist);
 		model.put("avail", avl.available(b_id));
-
 		return "showAvailbook";
+
+	}
+
+	@RequestMapping(value = "/return")
+	public String returnBook() {
+		return "returnBook";
+							
+	}
+
+	@RequestMapping(value = "/return", method = RequestMethod.POST)
+	public String returnedBook(@RequestParam String uid, @RequestParam int b_id) {
+
+		rt.returnbook(b_id, uid);
+		
+		return "redirect:/det";
 
 	}
 

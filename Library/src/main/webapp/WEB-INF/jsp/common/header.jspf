@@ -1,0 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<script src="/js/jquery.form.js"></script>
+
+<style>
+.alig {
+	margin-left: 45%;
+}
+
+
+.formalign {
+	width: 600px;
+	position: absolute;
+	left: 30%;
+}
+
+.cen {
+	position: absolute;
+	float: right;
+}
+.alg {
+	text-align: center;
+}
+
+.fog {
+	width: 60%;
+	position: absolute;
+	left: 20%;
+	padding: 20px;
+}
+
+.form-control {
+	margin: 20px;
+}
+
+.wid {
+	width: 100px;
+}
+.lev
+{
+margin-top:10px;
+}
+
+</style>
+
+
+</head>
