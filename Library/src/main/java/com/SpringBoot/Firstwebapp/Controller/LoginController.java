@@ -12,8 +12,6 @@ public class LoginController {
 
 	@Autowired
 	BookRepo repo;
-	
-
 
 	@RequestMapping("/welcome")
 	public String welcome(ModelMap model) {
@@ -21,16 +19,5 @@ public class LoginController {
 		return "welcomepage";
 
 	}
-
-	
-	
-	@RequestMapping("/ulogin")
-	public String login(ModelMap model)
-	{
-		return "check";
-	}
-	
-	
-	
 
 }

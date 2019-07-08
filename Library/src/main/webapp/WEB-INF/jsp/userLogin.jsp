@@ -3,13 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="icon" href="../../favicon.ico">
-
 <title>User Login</title>
 
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +21,7 @@
 	<div class="jumbotron">
 		<div class="main-header">
 			<div class="container">
-				<h1 class="lead text-center">Admin Login</h1>
+				<h1 class="lead text-center">User Login</h1>
 			</div>
 		</div>
 	</div>
@@ -37,7 +30,7 @@
 
 		<form class="form-signin" role="form">
 
-			<input type="number" class="form-control" placeholder="Admin Id"
+			<input type="email" class="form-control" placeholder="Email address"
 				required autofocus> <input type="password"
 				class="form-control" placeholder="Password" required>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
