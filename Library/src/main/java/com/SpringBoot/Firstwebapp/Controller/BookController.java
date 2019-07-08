@@ -1,6 +1,4 @@
-package com.SpringBoot.Firstwebapp.controllers;
-
-import java.util.ArrayList;
+package com.SpringBoot.Firstwebapp.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,22 +11,18 @@ import com.SpringBoot.Firstwebapp.Entity.Books;
 import com.SpringBoot.Firstwebapp.Repositories.BookRepo;
 import com.SpringBoot.Firstwebapp.Service.BookService;
 
-@Controller
-public class LoginController {
 
+@Controller
+public class BookController {
+
+	
 	@Autowired
 	BookRepo repo;
 	
 	@Autowired
 	BookService sev;
-
-	@RequestMapping("/")
-	public String welcome(ModelMap model) {
-		model.put("list", repo.findAll());
-		return "welcomepage";
-
-	}
-
+	
+	
 	@RequestMapping("/addbooks")
 	public String showadd(ModelMap model) {
 		
@@ -40,7 +34,7 @@ public class LoginController {
 	@RequestMapping(value = "/addbooks", method = RequestMethod.POST)
 	public String addbooks(Books obj) {
 		repo.save(obj);
-		return "redirect:/";
+		return "redirect:/welcome";
 
 	}
 
@@ -56,7 +50,7 @@ public class LoginController {
 	public String updatedBooks(Books obj) {
 
 		repo.save(obj);
-		return "redirect:/";
+		return "redirect:/welcome";
 
 	}
 
@@ -64,11 +58,13 @@ public class LoginController {
 	public String deleteBooks(@RequestParam int id) {
 		repo.deleteById(id);
 		
-		return "redirect:/";
+		return "redirect:/welcome";
 	}
 	
-	
-	
-	
-
+	@RequestMapping("/sh")
+	public String page(ModelMap model)
+	{
+		model.put("list", repo.findAll());
+		return "table";
+	}
 }

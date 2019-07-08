@@ -3,7 +3,7 @@
 		<div class="container-fluid">
 			<nav class="collapse navbar-collapse bs-navbar-collapse">
 				<ul class="nav navbar-nav nav-pills">
-					<li><a href="/">Home</a></li>
+					<li><a href="/welcome">Home</a></li>
 					<li><a href="/addbooks">Add books</a></li>
 					<li><a href="/addUser">Add a Users</a></li>
 					<li><a href="/query"> Query books</a></li>

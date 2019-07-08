@@ -1,6 +1,21 @@
 <%@ include file="common/header.jspf"%>
 <%@ include file="common/navigation.jspf"%>
 
+<main>
+<div class="jumbotron">
+	<div class="main-header">
+		<div class="container">
+			<h1 class="lead text-center">Avalabile Books </h1>
+		</div>
+	</div>
+</div>
+</main>
+
+
+
+
+
+
 	<table class="table  add">
 		<thead class="thead-dark">
 			<tr>

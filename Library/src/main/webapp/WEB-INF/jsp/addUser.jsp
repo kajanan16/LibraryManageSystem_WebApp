@@ -3,10 +3,12 @@
 
 
 	<main>
+	  <div class="jumbotron">
 	<div class="main-header">
 		<div class="container">
 			<h1 class="lead text-center">Add User Details</h1>
 		</div>
+	</div>
 	</div>
 	</main>
 	<div class="formalign">
@@ -48,7 +50,7 @@
 			</div>
 		</form:form>
 
-	</div>
+	
 
 </body>
 

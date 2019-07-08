@@ -1,4 +1,4 @@
-package com.SpringBoot.Firstwebapp.controllers;
+package com.SpringBoot.Firstwebapp.Controller;
 
 import java.util.ArrayList;
 import java.util.Optional;

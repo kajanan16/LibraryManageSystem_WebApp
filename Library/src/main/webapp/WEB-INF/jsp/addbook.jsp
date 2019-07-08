@@ -3,11 +3,13 @@
 
 
 	<main>
+	 <div class="jumbotron">
 	<div class="main-header">
 		<div class="container">
 			<h1 class="lead text-center">Add Book Details</h1>
 		</div>
 	</div>
+		</div>
 	</main>
 	<div>
 		<form:form method="post" modelAttribute="obj">

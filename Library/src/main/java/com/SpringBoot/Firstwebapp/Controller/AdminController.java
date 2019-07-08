@@ -1,7 +1,6 @@
-package com.SpringBoot.Firstwebapp.controllers;
+package com.SpringBoot.Firstwebapp.Controller;
 
 import java.util.ArrayList;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,8 +19,11 @@ import com.SpringBoot.Firstwebapp.Service.Return;
 import com.SpringBoot.Firstwebapp.Service.UserService;
 import com.SpringBoot.Firstwebapp.model.BookBarrow;
 
+
 @Controller
-public class UserController {
+public class AdminController {
+
+	
 	@Autowired
 	UserRepo usrepo;
 
@@ -120,5 +122,4 @@ public class UserController {
 		return "redirect:/det";
 
 	}
-
 }

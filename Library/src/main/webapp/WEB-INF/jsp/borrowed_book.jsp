@@ -3,10 +3,12 @@
 
 
 	<main>
+		 <div class="jumbotron">
 	<div class="main-header">
 		<div class="container">
 			<h1 class="lead text-center">Barrow book</h1>
 		</div>
+	</div>
 	</div>
 	</main>
 
