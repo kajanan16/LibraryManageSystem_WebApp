@@ -16,6 +16,7 @@ import com.SpringBoot.Firstwebapp.Repositories.BookRepo;
 import com.SpringBoot.Firstwebapp.Repositories.UserRepo;
 import com.SpringBoot.Firstwebapp.Service.Availablity;
 import com.SpringBoot.Firstwebapp.Service.Return;
+import com.SpringBoot.Firstwebapp.Service.UserPassword;
 import com.SpringBoot.Firstwebapp.Service.UserService;
 import com.SpringBoot.Firstwebapp.model.BookBarrow;
 
@@ -44,11 +45,26 @@ public class AdminController {
 
 	@Autowired
 	Return rt;
+	
+	
+	@Autowired
+	UserPassword upw;
+	
+
+	
+
+	@RequestMapping(value = "/adminLogin")
+	public String adminLogin() {
+
+		return "adminLogin";
+
+	}
+	
 
 	@RequestMapping(value = "/addUser")
 	public String userLoad(ModelMap model) {
 
-		model.addAttribute("userObj", new Users(service.addmisionNo(), "", "", 1, "", 1, ""));
+		model.addAttribute("userObj", new Users(service.addmisionNo(), "", "", 1, "", 1, "",""));
 		return "addUser";
 
 	}
@@ -56,6 +72,7 @@ public class AdminController {
 	@RequestMapping(value = "/addUser", method = RequestMethod.POST)
 	public String userLoad(Users userObj) {
 
+		userObj.setPassword(upw.generatePassword());
 		usrepo.save(userObj);
 		return "redirect:/";
 

@@ -17,6 +17,9 @@ public class BookService {
 
 	public int bookNumber() {
 		ArrayList<Books> lis = (ArrayList<Books>) repo.findAll();
+		
+		if(lis.size()==0)
+			return 1001;
 		int last = lis.size() - 1;
 		Books lsbook = lis.get(last);
 

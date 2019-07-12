@@ -1,96 +1,117 @@
 package com.SpringBoot.Firstwebapp.Entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Users {
 
 	@Id
-	private String Uid;
-	private String Ufname;
-	private String Ulname;
-	private int Uage;
-	private String Uaddress;
-	private long Uphone;
-	private String Uemail;
+	@Column(name="uid")
+	private String uId;
+	
+	@Column(name="ufname")
+	private String uFname;
+	
+	@Column(name="ulname")
+	private String uLname;
+	
+	@Column(name="uage")
+	private int uAge;
+	
+	@Column(name="uaddress")
+	private String uAddress;
+	
+	@Column(name="uphone")
+	private long uPhone;
+	
+	@Column(name="uemail")
+	private String uEmail;
+	
+	@Column(name="upassword")
+	private String uPassword;
+
+	public String getPassword() {
+		return uPassword;
+	}
+
+	public void setPassword(String upassword) {
+		this.uPassword = upassword;
+	}
 
 	public Users() {
 		super();
 	}
 
-	public Users(String uid, String ufname, String ulname, int uage, String uaddress, long uphone, String uemail) {
+	public Users(String uid, String ufname, String ulname, int uage, String uaddress, long uphone, String uemail,
+			String upassword) {
 		super();
-		Uid = uid;
-		Ufname = ufname;
-		Ulname = ulname;
-		Uage = uage;
-		Uaddress = uaddress;
-		Uphone = uphone;
-		Uemail = uemail;
+		uId = uid;
+		uFname = ufname;
+		uLname = ulname;
+		uAge = uage;
+		uAddress = uaddress;
+		uPhone = uphone;
+		uEmail = uemail;
+		uPassword = upassword;
 	}
 
 	public String getUid() {
-		return Uid;
+		return uId;
 	}
 
 	public void setUid(String uid) {
-		Uid = uid;
+		uId = uid;
 	}
 
 	public String getUfname() {
-		return Ufname;
+		return uFname;
 	}
 
 	public void setUfname(String ufname) {
-		Ufname = ufname;
+		uFname = ufname;
 	}
 
 	public String getUlname() {
-		return Ulname;
+		return uLname;
 	}
 
 	public void setUlname(String ulname) {
-		Ulname = ulname;
+		uLname = ulname;
 	}
 
 	public int getUage() {
-		return Uage;
+		return uAge;
 	}
 
 	public void setUage(int uage) {
-		Uage = uage;
+		uAge = uage;
 	}
 
 	public String getUaddress() {
-		return Uaddress;
+		return uAddress;
 	}
 
 	public void setUaddress(String uaddress) {
-		Uaddress = uaddress;
+		uAddress = uaddress;
 	}
 
 	public long getUphone() {
-		return Uphone;
+		return uPhone;
 	}
 
 	public void setUphone(long uphone) {
-		Uphone = uphone;
+		uPhone = uphone;
 	}
 
 	public String getUemail() {
-		return Uemail;
+		return uEmail;
 	}
 
 	public void setUemail(String uemail) {
-		Uemail = uemail;
-	}
-
-	@Override
-	public String toString() {
-		return "Users [Uid=" + Uid + ", Ufname=" + Ufname + ", Ulname=" + Ulname + ", Uage=" + Uage + ", Uaddress="
-				+ Uaddress + ", Uphone=" + Uphone + ", Uemail=" + Uemail + "]";
+		uEmail = uemail;
 	}
 }
+
+

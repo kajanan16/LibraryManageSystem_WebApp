@@ -12,9 +12,9 @@
 				<ul class="nav navbar-nav nav-pills">
 					<li><a href="/">Home</a></li>
 					<li><a href="/ulogin">User Login</a></li>
-					<li><a href="/">Admin Login</a></li>
+					<li><a href="/adminLogin">Admin Login</a></li>
 					<li><a href="/contact">Contact Us</a></li>
-					<li><a href="/">FeedBack</a></li>
+	
 
 				</ul>
 			</nav>

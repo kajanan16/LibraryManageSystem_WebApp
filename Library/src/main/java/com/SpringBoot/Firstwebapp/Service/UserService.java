@@ -19,6 +19,9 @@ public class UserService {
 	
 	public String addmisionNo() {
 		ArrayList<Users> lis = (ArrayList<Users>) rep.findAll();
+		
+		if(lis.size()==0)
+			return "100001";
 		int last = lis.size() - 1;
 		Users lsus = lis.get(last);
 

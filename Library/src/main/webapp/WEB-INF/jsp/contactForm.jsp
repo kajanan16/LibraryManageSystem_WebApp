@@ -26,11 +26,9 @@
 				name="firstname" placeholder="Your name.."> <label
 				for="lname">Last Name</label> <input type="text" id="lname"
 				name="lastname" placeholder="Your last name.."> <label
-				for="country">Country</label> <select id="country" name="country">
-				<option value="australia">Australia</option>
-				<option value="canada">Canada</option>
-				<option value="usa">USA</option>
-			</select> <label for="subject">Subject</label>
+				for="country">Email</label> <input type="email" id="email"
+				name="lastname" placeholder="Your mail id.."> <label
+				for="subject">Subject</label>
 			<textarea id="subject" name="subject" placeholder="Write something.."
 				style="height: 200px"></textarea>
 
