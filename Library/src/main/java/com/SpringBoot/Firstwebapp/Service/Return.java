@@ -22,7 +22,7 @@ public class Return {
 		ArrayList<BarrowBooks> alst = (ArrayList<BarrowBooks>) br.findAll();
 		for (int i = 0; i < alst.size(); i++) {
 			BarrowBooks bb = alst.get(i);
-			String getid = bb.getUser_id();
+			String getid = bb.getUserid();
 			if (bb.getBook_id() == bkid && getid.equals(usid)) {
 				br.delete(bb);
 			}

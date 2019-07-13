@@ -12,10 +12,6 @@
 </main>
 
 
-
-
-
-
 	<table class="table  add">
 		<thead class="thead-dark">
 			<tr>

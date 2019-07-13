@@ -20,11 +20,9 @@ import com.SpringBoot.Firstwebapp.Service.UserPassword;
 import com.SpringBoot.Firstwebapp.Service.UserService;
 import com.SpringBoot.Firstwebapp.model.BookBarrow;
 
-
 @Controller
 public class AdminController {
 
-	
 	@Autowired
 	UserRepo usrepo;
 
@@ -45,26 +43,14 @@ public class AdminController {
 
 	@Autowired
 	Return rt;
-	
-	
+
 	@Autowired
 	UserPassword upw;
-	
-
-	
-
-	@RequestMapping(value = "/adminLogin")
-	public String adminLogin() {
-
-		return "adminLogin";
-
-	}
-	
 
 	@RequestMapping(value = "/addUser")
 	public String userLoad(ModelMap model) {
 
-		model.addAttribute("userObj", new Users(service.addmisionNo(), "", "", 1, "", 1, "",""));
+		model.addAttribute("userObj", new Users(service.addmisionNo(), "", "", 1, "", 1, "", ""));
 		return "addUser";
 
 	}
@@ -74,7 +60,7 @@ public class AdminController {
 
 		userObj.setPassword(upw.generatePassword());
 		usrepo.save(userObj);
-		return "redirect:/";
+		return "redirect:/welcome";
 
 	}
 
@@ -89,7 +75,7 @@ public class AdminController {
 
 		// br.action(uid, b_id);
 		// 100001
-		br.action("100001", 1004);
+		br.action(uid, b_id);
 		model.put("list", brepo.findAll());
 
 		return "show";
@@ -128,15 +114,16 @@ public class AdminController {
 	@RequestMapping(value = "/return")
 	public String returnBook() {
 		return "returnBook";
-							
+
 	}
 
 	@RequestMapping(value = "/return", method = RequestMethod.POST)
 	public String returnedBook(@RequestParam String uid, @RequestParam int b_id) {
 
 		rt.returnbook(b_id, uid);
-		
+
 		return "redirect:/det";
 
 	}
+
 }

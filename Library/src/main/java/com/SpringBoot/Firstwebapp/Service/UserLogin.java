@@ -1,7 +1,5 @@
 package com.SpringBoot.Firstwebapp.Service;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +13,16 @@ public class UserLogin {
 	UserRepo urep;
 
 	public boolean validPass(String uid, String pwd) {
-		Optional<Users> pass = urep.findById(uid);
-		Users us = pass.get();
 
-		if (us.getPassword().equals(pwd))
+		String pas = "";
+
+		try {
+			Users pass = urep.findById(uid).orElse(null);
+			pas = pass.getPassword();
+		} catch (NullPointerException e) {
+			e.printStackTrace();
+		}
+		if (pas.equals(pwd))
 			return true;
 
 		return false;

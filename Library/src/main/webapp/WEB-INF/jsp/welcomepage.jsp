@@ -22,7 +22,6 @@
 				<th>Quantity</th>
 				<th>Price</th>
 				<th>Category</th>
-
 				<th>Update</th>
 				<th>Delete</th>
 			</tr>

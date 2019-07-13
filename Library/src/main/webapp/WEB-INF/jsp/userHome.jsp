@@ -61,22 +61,7 @@
 
 </head>
 <body>
-	<header class="navbar navbar-static-top navbar-default">
-		<div class="container-fluid">
-			<nav class="collapse navbar-collapse bs-navbar-collapse">
-				<ul class="nav navbar-nav nav-pills">
-					<li><a href="/">Home</a></li>
-					<li><a href="/">My Details</a></li>
-					<li><a href="/">Book Query</a></li>
-					<li><a href="/">Fine Detials</a></li>
-					<li><a href="/">My Books</a></li>
-					<li><a href="/">Logout</a></li>
-
-				</ul>
-			</nav>
-		</div>
-	</header>
-
+		<%@ include file="common/userPageNav.jsp"%>
 	<main>
 	<div class="jumbotron">
 		<div class="main-header">

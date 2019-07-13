@@ -10,7 +10,7 @@
 <meta name="author" content="">
 <link rel="icon" href="../../favicon.ico">
 
-<title>User Login</title>
+<title>Admin Login</title>
 
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -35,11 +35,11 @@
 	</main>
 	<div class="container">
 
-		<form class="form-signin" role="form">
+		<form class="form-signin" method="post">
 
 			<input type="number" class="form-control" placeholder="Admin Id"
-				required autofocus> <input type="password"
-				class="form-control" placeholder="Password" required>
+				required autofocus name="aid"> <input type="password"
+				class="form-control" placeholder="Password" name="apwd" required>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
 				in</button>
 		</form>

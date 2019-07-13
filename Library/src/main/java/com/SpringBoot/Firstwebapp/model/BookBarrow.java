@@ -31,20 +31,19 @@ public class BookBarrow {
 
 	public void action(String us, int bk) {
 
-		Optional<Users> usobj = usrepo.findById(us);
-		Optional<Books> bkobj = repo.findById(bk);
+		Users usobj = usrepo.findById(us).orElse(null);
+		Books bkobj = repo.findById(bk).orElse(null);
 
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd ");
 		LocalDateTime now = LocalDateTime.now();
 		System.out.println(dtf.format(now));
 
-		Users obj = usobj.get();
-		Books obj1 = bkobj.get();
+	
 		// bbk.setTrasac_id(2);
 		bbk1.setBook_id(bk);
-		bbk1.setBookname(obj1.getB_name());
+		bbk1.setBookname(bkobj.getB_name());
 		bbk1.setDate(dtf.format(now).toString());
-		bbk1.setUser_id(obj.getUid());
+		bbk1.setUser_id(usobj.getUid());
 
 		brepo.save(bbk1);
 

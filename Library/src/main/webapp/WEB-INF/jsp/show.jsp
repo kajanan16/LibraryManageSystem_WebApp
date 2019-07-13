@@ -1,8 +1,5 @@
 <%@ include file="common/header.jspf"%>
-
 <%@ include file="common/navigation.jspf"%>
-
-
 <main>
 <div class="jumbotron">
 	<div class="main-header">
@@ -21,22 +18,17 @@
 				<th>Book_Id</th>
 				<th>Book_Name</th>
 				<th>Book_BorrowDate</th>
-				<th>Update</th>
-				<th>Delete</th>
 			</tr>
 		</thead>
 		<tbody>
 			<c:forEach items="${list}" var="bbrw">
 				<tr>
-					<td>${bbrw.user_id}</td>
+					<td>${bbrw.userid}</td>
 					<td>${bbrw.book_id}</td>
 					<td>${bbrw.bookname}</td>
 					<td>${bbrw.date}</td>
 
-					<td><a type="Button" class="btn btn-success"
-						href="/update-book?id=${bbrw.trasac_id}">Update</a></td>
-					<td><a type="Button" class="btn btn-warning"
-						href="/deletebook?id=${bbrw.trasac_id}">Delete</a></td>
+
 				</tr>
 			</c:forEach>
 
@@ -44,10 +36,6 @@
 	</table>
 
 </div>
-
-
-
-
 
 </body>
 </html>
